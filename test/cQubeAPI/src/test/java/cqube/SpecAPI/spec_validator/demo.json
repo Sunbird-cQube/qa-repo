@@ -1,0 +1,29 @@
+{
+    "ingestion_type": "dimension",
+    "dimension_name": "dimension_block",
+    "input": {
+        "type": "object",
+        "properties": {
+            "dimension_name": {
+                "type": "string"
+            },
+            "dimension": {
+                "type": "array",
+                "shouldnotnull": true,
+                "items": {
+                    "type": "object",
+                    "properties": {"block_id": {"type": "string", "shouldnotnull": true, "pattern": "^[a-z,A-Z,0-9]{5}$"}, "block_name": {"type": "string", "shouldnotnull": true}, "latitude": {"type": "number", "shouldnotnull": true}, "longitude": {"type": "number", "shouldnotnull": true}},
+                    "required":  ["block_id", "block_name", "latitude", "longitude"]
+                }
+            },
+            "target_table": {
+                "type": "string",
+                "pattern": "ingestion.dimension_block"
+            }
+        },
+        "required": [
+            "dimension_name",
+            "dimension"
+        ]
+    }
+}

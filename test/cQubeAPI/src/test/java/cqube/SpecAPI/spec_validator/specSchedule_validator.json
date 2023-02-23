@@ -1,0 +1,96 @@
+[
+    {
+        "pipeline_name": "student_count_pipe",
+        "schedule_type": "dimension_to_db",
+        "scheduled_at": "2/02/2023 13:00:00",
+        "scenario":"Verify the Spec Schedule with valid request body ",
+        "testcase_type":"Valid",
+        "message": "Schedule created Successfully"
+    },
+    {
+        "pipeline_name": "student_count_pipe",
+        "schedule_type": "dimension_to_db",
+        "scheduled_at": "2/02/2023 13:00:00",
+        "scenario":"Verify the Spec Schedule with valid request body ",
+        "testcase_type":"valid",
+        "message": "Schedule created Successfully"
+    },
+    {
+        "schedule_type": "dimension_to_db",
+        "scheduled_at": "2/02/2023 13:00:00",
+        "scenario":"Verify the Spec pipeline with removing pipeline_name from request body ",
+        "testcase_type":"invalid",
+        "message":"must have required property 'pipeline_name'"
+    },
+    {
+        "pipeline_name": "",
+        "schedule_type": "dimension_to_db",
+        "scheduled_at": "2/02/2023 13:00:00",
+        "scenario":"Verify the Spec pipeline by providing pipeline_name as empty string ",
+        "testcase_type":"invalid",
+        "message":"must pass \"shouldnotnull\" keyword validation"
+    },
+    {   
+        "pipeline_name": "student_count_pipe",
+        "scheduled_at": "2/02/2023 13:00:00",
+        "scenario":"Verify the Spec pipeline with removing pipeline_name from request body ",
+        "testcase_type":"invalid",
+        "message":"must have required property 'schedule_type'"
+    },
+    {
+        "pipeline_name": "student_count_pipe",
+        "schedule_type": "",
+        "scheduled_at": "2/02/2023 13:00:00",
+        "scenario":"Verify the Spec pipeline by providing schedule_type as empty string ",
+        "testcase_type":"invalid",
+        "message":"must pass \"shouldnotnull\" keyword validation"
+    },
+    {   
+        "pipeline_name": "student_count_pipe",
+        "schedule_type": "dimension_to_db",
+        "scenario":"Verify the Spec pipeline with removing scheduled_at from request body ",
+        "testcase_type":"invalid",
+        "message":"must have required property 'scheduled_at'"
+    },
+    {
+        "pipeline_name": "student_count_pipe",
+        "schedule_type": "dimension_to_db",
+        "scheduled_at": "",
+        "scenario":"Verify the Spec pipeline by providing schedule_at as empty string ",
+        "testcase_type":"invalid",
+        "message":"must pass \"shouldnotnull\" keyword validation"
+    },
+    {
+        "pipeline_name": "student",
+        "schedule_type": "dimension_to_db",
+        "scheduled_at": "2/02/2023 13:00:00",
+        "scenario":"Verify the Spec Schedule with invalid pipeline_name ",
+        "testcase_type":"Valid",
+        "message": "Invalid pipeline_name"
+    },
+    {
+        "pipeline_name": "student_count_pipe",
+        "schedule_type": "dimension_to_database",
+        "scheduled_at": "2/02/2023 13:00:00",
+        "scenario":"Verify the Spec Schedule with invalid schedule_type  ",
+        "testcase_type":"Valid",
+        "message": "Invalid schedule_type"
+    },
+    {
+        "pipeline_name": "student_count_pipe",
+        "schedule_type": "dimension_to_db",
+        "scheduled_at": "2-02-23 13:00:00",
+        "scenario":"Verify the Spec Schedule with invalid scheduled_at  ",
+        "testcase_type":"Valid",
+        "message": "Invalid scheduled_at"
+    },
+    {
+        "pipeline_name": "student_count_pipe",
+        "schedule_type": "dimension_to_db",
+        "scheduled_at": "2-02-23 13:00:00",
+        "scenario":"Verify the Spec Schedule with invalid scheduled_at  ",
+        "testcase_type":"Valid",
+        "message": "Invalid scheduled_at"
+    }
+      
+]

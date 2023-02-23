@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.1:23]","start":1676389637486,"end":1676389638785,"title":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.1:23] 21:17:17.486-21:17:18.785 Verify the scenario"},{"id":2,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.2:23]","start":1676389638795,"end":1676389639155,"title":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.2:23] 21:17:18.795-21:17:19.155 Verify the scenario","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.3:23]","start":1676389639204,"end":1676389639540,"title":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.3:23] 21:17:19.204-21:17:19.540 Verify the scenario"},{"id":4,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.4:23]","start":1676389639546,"end":1676389639843,"title":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.4:23] 21:17:19.546-21:17:19.843 Verify the scenario"},{"id":5,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.5:23]","start":1676389639849,"end":1676389640077,"title":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.5:23] 21:17:19.849-21:17:20.077 Verify the scenario"},{"id":6,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.6:23]","start":1676389640097,"end":1676389640309,"title":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.6:23] 21:17:20.097-21:17:20.309 Verify the scenario"},{"id":7,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.7:23]","start":1676389640316,"end":1676389640473,"title":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.7:23] 21:17:20.316-21:17:20.473 Verify the scenario"},{"id":8,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.8:23]","start":1676389640477,"end":1676389641049,"title":"src\/test\/java\/cqube\/SpecAPI\/SAC\/SpecTransformer[2.8:23] 21:17:20.477-21:17:21.049 Verify the scenario"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
