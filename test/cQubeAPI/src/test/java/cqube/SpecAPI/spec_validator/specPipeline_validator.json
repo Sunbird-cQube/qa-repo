@@ -1,0 +1,281 @@
+[
+   
+    {
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline with removing pipeline_name from request body ",
+        "testcase_type":"invalid",
+        "message":"must have required property 'pipeline_name'"
+    },
+    {
+        "pipeline_name": "",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by providing ingestion_name as empty string ",
+        "testcase_type":"invalid",
+        "message":"must pass \"shouldnotnull\" keyword validation"
+    },
+
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline": [
+            {
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline with removing pipeline_type from request body ",
+        "testcase_type":"invalid",
+        "message":"must have required property 'pipeline_type'"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "",
+        "pipeline": [
+            {
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by providing pipeline_type as empty string ",
+        "testcase_type":"invalid",
+        "message":"must pass \"shouldnotnull\" keyword validation"
+    },
+    {
+        
+            "pipeline_name": "SAC_stds_atd_cmp_by_school",
+            "pipeline_type": "ingest_to_db",
+            "pipeline": [
+               
+            ],
+            "scenario":"Verify the Spec pipeline by providing pipeline as empty [] ",
+            "testcase_type":"invalid",
+            "message":"must pass \"shouldnotnull\" keyword validation"
+        
+    },
+    {
+        
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by providing pipeline without properties ",
+        "testcase_type":"invalid",
+        "message": "must have required property 'transformer_name'"
+    
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by removing event_name  ",
+        "testcase_type":"invalid",
+        "message": "must have required property 'event_name'"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": " ",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by removing event_name  ",
+        "testcase_type":"invalid",
+        "message": "must pass \"shouldnotnull\" keyword validation"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {   
+                "event_name": "event_students_attendance",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by removing dataset_name ",
+        "testcase_type":"invalid",
+        "message": "must have required property 'dataset_name'"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_students_attendance",
+                "dataset_name": "",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by removing dataset_name  ",
+        "testcase_type":"invalid",
+        "message": "must pass \"shouldnotnull\" keyword validation"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {   
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by removing dimension_name ",
+        "testcase_type":"invalid",
+        "message": "must have required property 'dimension_name'"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": " ",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by removing dataset_name  ",
+        "testcase_type":"invalid",
+        "message": "must pass \"shouldnotnull\" keyword validation"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {   
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension_school"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by removing transformer_name ",
+        "testcase_type":"invalid",
+        "message": "must have required property 'transformer_name'"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": " "
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by removing transformer_name ",
+        "testcase_type":"invalid",
+        "message": "must pass \"shouldnotnull\" keyword validation"
+    },
+   
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_database",
+        "pipeline": [
+            {
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by providing invalid pipeline_type ",
+        "testcase_type":"invalid",
+        "message": "Invalid pipeline type"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_students_attend",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by providing invalid event_name ",
+        "testcase_type":"invalid",
+        "message": "Cannot find event name"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_students_attendance",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by providing invalid dataset_name ",
+        "testcase_type":"invalid",
+        "message": "Cannot find dataset name"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension",
+                "transformer_name": "SAC_stds_atd_cmp_by_school.py"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by providing invalid dimension_name ",
+        "testcase_type":"invalid",
+        "message": "Cannot find dimension name"
+    },
+    {
+        "pipeline_name": "SAC_stds_atd_cmp_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_students_attendance",
+                "dataset_name": "SAC_stds_atd_cmp_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "SAC_stds_atd_cmp_by_school"
+            }
+        ],
+        "scenario":"Verify the Spec pipeline by providing invalid  transformer_name ",
+        "testcase_type":"invalid",
+        "message": "Transformer not found"
+    }
+
+]
