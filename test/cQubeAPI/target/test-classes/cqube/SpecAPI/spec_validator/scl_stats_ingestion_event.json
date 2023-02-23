@@ -1,0 +1,261 @@
+[
+	{
+		"event_name": "event_school_statistics_students",
+		"event": [
+			{
+				"academic_year": "2018",
+				"school_id": "S000000001",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			}
+		],
+		"scenario": "Verify the valid request body for school ingestion/event",
+		"message": "Event added successfully",
+		"invalid_record_count": 0,
+		"valid_record_count": 1
+	},
+	{
+		"event_name": "event_school_statistics_students",
+		"event": [
+			{
+				"academic_year": "2018",
+				"school_id": "S000000001",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			},
+			{
+				"academic_year": "2020",
+				"school_id": "S0000002123",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			}
+		],
+		"scenario": "Verify the valid request body for school ingestion/event",
+		"message": "Event added successfully",
+		"invalid_record_count": 1,
+		"valid_record_count": 1
+	},
+	{
+		"event_name": "event_school_statistics_students",
+		"event": [
+			{
+				"academic_year": 2018,
+				"school_id": "S000000001",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			}
+		],
+		"scenario": "Verify the invalid academic value in body ingestion/event",
+		"message": "Event added successfully",
+		"invalid_record_count": 1,
+		"valid_record_count": 0
+	},
+	{
+		"event_name": "event_school_statistics_students",
+		"event": [
+			{
+				"academic_year": "2018",
+				"school_id": 123,
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			}
+		],
+		"scenario": "Verify the invalid school_id in body ingestion/event",
+		"message": "Event added successfully",
+		"invalid_record_count": 1,
+		"valid_record_count": 0
+	},
+	{
+		"event_name": "event_school_statistics_students",
+		"event": [
+			{
+				"academic_year": "2018",
+				"school_id": "S000000001",
+				"school_category": 123,
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			}
+		],
+		"scenario": "Verify the invalid school_catagory for school_id ingestion/event",
+		"message": "Event added successfully",
+		"invalid_record_count": 1,
+		"valid_record_count": 0
+	},
+	{
+		"event_name": "event_school_statistics_students",
+		"event": [
+			{
+				"academic_year": "2018",
+				"school_id": "S000000001",
+				"school_category": "rural",
+				"grade": "1w234",
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			}
+		],
+		"scenario": "Verify the invalid grade for school_id ingestion/event",
+		"message": "Event added successfully",
+		"invalid_record_count": 1,
+		"valid_record_count": 0
+	},
+	{
+		"event_name": "event_school_statistics_students",
+		"event": [
+			{
+				"academic_year": "2018",
+				"school_id": "S000000001",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": 123,
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			}
+		],
+		"scenario": "Verify the invalid grade for gender ingestion/event",
+		"message": "Event added successfully",
+		"invalid_record_count": 1,
+		"valid_record_count": 0
+	},
+	{
+		"event_name": "event_school_statistics_students",
+		"event": [
+			{
+				"academic_year": "2018",
+				"school_id": "S000000001",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": 123,
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			}
+		],
+		"scenario": "Verify the invalid student_category ",
+		"message": "Event added successfully",
+		"invalid_record_count": 1,
+		"valid_record_count": 0
+	},
+	{
+		"event_name": "event_school_statistics_students",
+		"event": [
+			{
+				"academic_year": "2018",
+				"school_id": "S000000001",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": "46",
+				"cwsn_enrolled": 30
+			}
+		],
+		"scenario": "Verify the invalid student_enrolled ",
+		"message": "Event added successfully",
+		"invalid_record_count": 1,
+		"valid_record_count": 0
+	},
+	{
+		"event_name": "event_school_statistics_students",
+		"event": [
+			{
+				"academic_year": "2018",
+				"school_id": "S000000001",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 46,
+				"cwsn_enrolled": "30"
+			}
+		],
+		"scenario": "Verify the invalid cwsn_enrolled ",
+		"message": "Event added successfully",
+		"invalid_record_count": 1,
+		"valid_record_count": 0
+	},
+	{
+		"event_name": "event_school_statistics_students",
+		"event": [
+			{
+				"academic_year": "2018",
+				"school_id": "S000000001",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			},
+			{
+				"academic_year": "2018",
+				"school_id": "S000000001",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			},
+			{
+				"academic_year": 2020,
+				"school_id": "S0000002123",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			},
+			{
+				"academic_year": "2020",
+				"school_id": "S0000002123",
+				"school_category": 123,
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": 45,
+				"cwsn_enrolled": 30
+			},
+			{
+				"academic_year": "2020",
+				"school_id": "S0000002123",
+				"school_category": "rural",
+				"grade": 1,
+				"gender": "male",
+				"student_category": "general",
+				"students_enrolled": "45",
+				"cwsn_enrolled": 30
+			}
+		],
+		"scenario": "Verify the valid request body for school ingestion/event",
+		"message": "Event added successfully",
+		"invalid_record_count": 3,
+		"valid_record_count": 2
+	}
+]

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.1:33]","start":1676886491711,"end":1676886492608,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.1:33] 15:18:11.711-15:18:12.608 Verify the valid request body for school ingestion\/event"},{"id":2,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.2:33]","start":1676886492617,"end":1676886492950,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.2:33] 15:18:12.617-15:18:12.950 Verify the valid request body for school ingestion\/event"},{"id":3,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.3:33]","start":1676886492975,"end":1676886493355,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.3:33] 15:18:12.975-15:18:13.355 Verify the invalid academic value in body ingestion\/event"},{"id":4,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.4:33]","start":1676886493376,"end":1676886493741,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.4:33] 15:18:13.376-15:18:13.741 Verify the invalid school_id in body ingestion\/event"},{"id":5,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.5:33]","start":1676886493767,"end":1676886494189,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.5:33] 15:18:13.767-15:18:14.189 Verify the invalid school_catagory for school_id ingestion\/event"},{"id":6,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.6:33]","start":1676886494194,"end":1676886494601,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.6:33] 15:18:14.194-15:18:14.601 Verify the invalid grade for school_id ingestion\/event"},{"id":7,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.7:33]","start":1676886494617,"end":1676886495007,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.7:33] 15:18:14.617-15:18:15.007 Verify the invalid grade for gender ingestion\/event"},{"id":8,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.8:33]","start":1676886495021,"end":1676886495442,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.8:33] 15:18:15.021-15:18:15.442 Verify the invalid student_category"},{"id":9,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.9:33]","start":1676886495458,"end":1676886495825,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.9:33] 15:18:15.458-15:18:15.825 Verify the invalid student_enrolled"},{"id":10,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.10:33]","start":1676886495834,"end":1676886496144,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.10:33] 15:18:15.834-15:18:16.144 Verify the invalid cwsn_enrolled"},{"id":11,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.11:33]","start":1676886496150,"end":1676886496543,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.11:33] 15:18:16.150-15:18:16.543 Verify the valid request body for school ingestion\/event"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

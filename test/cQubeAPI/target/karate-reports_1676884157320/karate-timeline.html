@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.1:31]","start":1676884055718,"end":1676884056600,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.1:31] 14:37:35.718-14:37:36.600 undefined"},{"id":2,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.2:31]","start":1676884056617,"end":1676884057213,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.2:31] 14:37:36.617-14:37:37.213 undefined","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.3:31]","start":1676884057227,"end":1676884058237,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.3:31] 14:37:37.227-14:37:38.237 undefined"},{"id":4,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.4:31]","start":1676884058259,"end":1676884059218,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.4:31] 14:37:38.259-14:37:39.218 undefined"},{"id":5,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.5:31]","start":1676884059232,"end":1676884060217,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.5:31] 14:37:39.232-14:37:40.217 undefined"},{"id":6,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.6:31]","start":1676884060231,"end":1676884061244,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.6:31] 14:37:40.231-14:37:41.244 undefined"},{"id":7,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.7:31]","start":1676884061274,"end":1676884062160,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.7:31] 14:37:41.274-14:37:42.160 undefined"},{"id":8,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.8:31]","start":1676884062169,"end":1676884062529,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.8:31] 14:37:42.169-14:37:42.529 undefined"},{"id":9,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.9:31]","start":1676884062546,"end":1676884063249,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.9:31] 14:37:42.546-14:37:43.249 undefined"},{"id":10,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.10:31]","start":1676884063269,"end":1676884064256,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.10:31] 14:37:43.269-14:37:44.256 undefined"},{"id":11,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.11:31]","start":1676884064284,"end":1676884065247,"title":"src\/test\/java\/cqube\/SpecAPI\/spec_validator\/scl_stats_ingestion_event[2.11:31] 14:37:44.284-14:37:45.247 undefined"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

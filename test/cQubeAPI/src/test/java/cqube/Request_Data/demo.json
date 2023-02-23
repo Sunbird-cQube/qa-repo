@@ -1,0 +1,747 @@
+[
+    
+    {
+        "pipeline_name": "total_teachers_by_cluster",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_stats_total_schools_by_cluster",
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "Scl_stats_total_schools_by_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_teachers_by_block",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_stats_total_schools_by_block",
+                "dimension_name": "dimension_block",
+                "transformer_name": "Scl_stats_total_schools_by_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_teachers_by_district",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_stats_total_schools_by_district",
+                "dimension_name": "dimension_district",
+                "transformer_name": "Scl_stats_total_schools_by_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_teachers_by_state",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_total_teachers_by_state",
+                "dimension_name": "dimension_state",
+                "transformer_name": "Scl_Stats_total_teachers_by_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_teachers_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_grade_wise_teachers_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_grade_wise_teachers_by_school.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_teachers_by_cluster",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_grade_wise_teachers_by_cluster",
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "Scl_Stats_grade_wise_teachers_by_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_teachers_by_block",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_grade_wise_teachers_by_block",
+                "dimension_name": "dimension_block",
+                "transformer_name": "Scl_Stats_grade_wise_teachers_by_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_teachers_by_district",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_grade_wise_teachers_by_district",
+                "dimension_name": "dimension_district",
+                "transformer_name": "Scl_Stats_grade_wise_teachers_by_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_teachers_by_state",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_grade_wise_teachers_by_state",
+                "dimension_name": "dimension_state",
+                "transformer_name": "Scl_Stats_grade_wise_teachers_by_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "average_pupil_teacher_ratio_by_grade",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_average_pupil_teacher_ratio_by_grade",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_average_pupil_teacher_ratio_by_grade.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "average_pupil_teacher_ratio_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_average_pupil_teacher_ratio_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_average_pupil_teacher_ratio_by_school.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "average_pupil_teacher_ratio_by_cluster",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_average_pupil_teacher_ratio_by_cluster",
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "Scl_Stats_average_pupil_teacher_ratio_by_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "average_pupil_teacher_ratio_by_block",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_average_pupil_teacher_ratio_by_block",
+                "dimension_name": "dimension_block",
+                "transformer_name": "Scl_Stats_average_pupil_teacher_ratio_by_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "average_pupil_teacher_ratio_by_district",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_average_pupil_teacher_ratio_by_district",
+                "dimension_name": "dimension_district",
+                "transformer_name": "Scl_Stats_average_pupil_teacher_ratio_by_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "average_pupil_teacher_ratio_by_state",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_average_pupil_teacher_ratio_by_state",
+                "dimension_name": "dimension_state",
+                "transformer_name": "Scl_Stats_average_pupil_teacher_ratio_by_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_average_pupil_teacher_ratio_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_grade_wise_average_pupil_teacher_ratio_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_grade_wise_average_pupil_teacher_ratio_by_school.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_average_pupil_teacher_ratio_by_cluster",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_grade_wise_average_pupil_teacher_ratio_by_cluster",
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "Scl_Stats_grade_wise_average_pupil_teacher_ratio_by_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_average_pupil_teacher_ratio_by_block",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_grade_wise_average_pupil_teacher_ratio_by_block",
+                "dimension_name": "dimension_block",
+                "transformer_name": "Scl_Stats_grade_wise_average_pupil_teacher_ratio_by_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_average_pupil_teacher_ratio_by_district",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_grade_wise_average_pupil_teacher_ratio_by_district",
+                "dimension_name": "dimension_district",
+                "transformer_name": "Scl_Stats_grade_wise_average_pupil_teacher_ratio_by_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_average_pupil_teacher_ratio_by_state",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_teachers",
+                "dataset_name": "Scl_Stats_grade_wise_average_pupil_teacher_ratio_by_state",
+                "dimension_name": "dimension_state",
+                "transformer_name": "Scl_Stats_grade_wise_average_pupil_teacher_ratio_by_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_schools_by_cluster",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_total_schools_by_cluster",
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "Scl_Stats_total_schools_by_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_schools_by_block",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_total_schools_by_block",
+                "dimension_name": "dimension_block",
+                "transformer_name": "Scl_Stats_total_schools_by_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_schools_by_district",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_total_schools_by_district",
+                "dimension_name": "dimension_district",
+                "transformer_name": "Scl_Stats_total_schools_by_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_schools_by_state",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_total_schools_by_state",
+                "dimension_name": "dimension_state",
+                "transformer_name": "Scl_Stats_total_schools_by_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "category_wise_schools_by_cluster",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_category_wise_schools_by_cluster",
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "Scl_Stats_category_wise_schools_by_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "category_wise_schools_by_block",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_category_wise_schools_by_block",
+                "dimension_name": "dimension_block",
+                "transformer_name": "Scl_Stats_category_wise_schools_by_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "category_wise_schools_by_district",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_category_wise_schools_by_district",
+                "dimension_name": "dimension_district",
+                "transformer_name": "Scl_Stats_category_wise_schools_by_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "category_wise_schools_by_state",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_category_wise_schools_by_state",
+                "dimension_name": "dimension_state",
+                "transformer_name": "Scl_Stats_category_wise_schools_by_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_enrollment_by_grade",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_total_enrollment_by_grade",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_total_enrollment_by_grade.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_enrollment_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_total_enrollment_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_total_enrollment_by_school.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_enrollment_by_cluster",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_total_enrollment_by_cluster",
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "Scl_Stats_total_enrollment_by_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_enrollment_by_block",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_total_enrollment_by_block",
+                "dimension_name": "dimension_block",
+                "transformer_name": "Scl_Stats_total_enrollment_by_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_enrollment_by_district",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_total_enrollment_by_district",
+                "dimension_name": "dimension_district",
+                "transformer_name": "Scl_Stats_total_enrollment_by_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "total_enrollment_by_state",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_total_enrollment_by_state",
+                "dimension_name": "dimension_state",
+                "transformer_name": "Scl_Stats_total_enrollment_by_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "gender_wise_enrollment_by_grade",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_gender_wise_enrollment_by_grade",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_gender_wise_enrollment_by_grade.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "gender_wise_enrollment_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_gender_wise_enrollment_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_gender_wise_enrollment_by_school.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "gender_wise_enrollment_by_cluster",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_gender_wise_enrollment_by_cluster",
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "Scl_Stats_gender_wise_enrollment_by_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "gender_wise_enrollment_by_block",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_gender_wise_enrollment_by_block",
+                "dimension_name": "dimension_block",
+                "transformer_name": "Scl_Stats_gender_wise_enrollment_by_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "gender_wise_enrollment_by_district",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_gender_wise_enrollment_by_district",
+                "dimension_name": "dimension_district",
+                "transformer_name": "Scl_Stats_gender_wise_enrollment_by_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "gender_wise_enrollment_by_state",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_gender_wise_enrollment_by_state",
+                "dimension_name": "dimension_state",
+                "transformer_name": "Scl_Stats_gender_wise_enrollment_by_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "cwsn_enrollment_by_grade",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_cwsn_enrollment_by_grade",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_cwsn_enrollment_by_grade.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "cwsn_enrollment_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_cwsn_enrollment_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_cwsn_enrollment_by_school.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "cwsn_enrollment_by_cluster",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_cwsn_enrollment_by_cluster",
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "Scl_Stats_cwsn_enrollment_by_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "cwsn_enrollment_by_block",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_cwsn_enrollment_by_block",
+                "dimension_name": "dimension_block",
+                "transformer_name": "Scl_Stats_cwsn_enrollment_by_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "cwsn_enrollment_by_district",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_cwsn_enrollment_by_district",
+                "dimension_name": "dimension_district",
+                "transformer_name": "Scl_Stats_cwsn_enrollment_by_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "cwsn_enrollment_by_state",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_cwsn_enrollment_by_state",
+                "dimension_name": "dimension_state",
+                "transformer_name": "Scl_Stats_cwsn_enrollment_by_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "student_category_wise_enrollment_by_grade",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_student_category_wise_enrollment_by_grade",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_student_category_wise_enrollment_by_grade.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "student_category_wise_enrollment_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_student_category_wise_enrollment_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_student_category_wise_enrollment_by_school.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "student_category_wise_enrollment_by_cluster",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_student_category_wise_enrollment_by_cluster",
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "Scl_Stats_student_category_wise_enrollment_by_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "student_category_wise_enrollment_by_block",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_student_category_wise_enrollment_by_block",
+                "dimension_name": "dimension_block",
+                "transformer_name": "Scl_Stats_student_category_wise_enrollment_by_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "student_category_wise_enrollment_by_district",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_student_category_wise_enrollment_by_district",
+                "dimension_name": "dimension_district",
+                "transformer_name": "Scl_Stats_student_category_wise_enrollment_by_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "student_category_wise_enrollment_by_state",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_student_category_wise_enrollment_by_state",
+                "dimension_name": "dimension_state",
+                "transformer_name": "Scl_Stats_student_category_wise_enrollment_by_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_enrollment_by_school",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_grade_wise_enrollment_by_school",
+                "dimension_name": "dimension_school",
+                "transformer_name": "Scl_Stats_grade_wise_enrollment_by_school.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_enrollment_by_cluster",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_grade_wise_enrollment_by_cluster",
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "Scl_Stats_grade_wise_enrollment_by_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_enrollment_by_block",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_grade_wise_enrollment_by_block",
+                "dimension_name": "dimension_block",
+                "transformer_name": "Scl_Stats_grade_wise_enrollment_by_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_enrollment_by_district",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_grade_wise_enrollment_by_district",
+                "dimension_name": "dimension_district",
+                "transformer_name": "Scl_Stats_grade_wise_enrollment_by_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_name": "grade_wise_enrollment_by_state",
+        "pipeline_type": "ingest_to_db",
+        "pipeline": [
+            {
+                "event_name": "event_school_statistics_students",
+                "dataset_name": "Scl_Stats_grade_wise_enrollment_by_state",
+                "dimension_name": "dimension_state",
+                "transformer_name": "Scl_Stats_grade_wise_enrollment_by_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_type": "dimension_to_db",
+        "pipeline_name": "dimension_master_details",
+        "pipeline": [
+            {
+                "dimension_name": "dimension_master",
+                "transformer_name": "dimension_master.py"
+            }
+        ]
+    },
+    {
+        "pipeline_type": "dimension_to_db",
+        "pipeline_name": "dimension_state_details",
+        "pipeline": [
+            {
+                "dimension_name": "dimension_state",
+                "transformer_name": "dimension_state.py"
+            }
+        ]
+    },
+    {
+        "pipeline_type": "dimension_to_db",
+        "pipeline_name": "dimension_district_details",
+        "pipeline": [
+            {
+                "dimension_name": "dimension_district",
+                "transformer_name": "dimension_district.py"
+            }
+        ]
+    },
+    {
+        "pipeline_type": "dimension_to_db",
+        "pipeline_name": "dimension_block_details",
+        "pipeline": [
+            {
+                "dimension_name": "dimension_block",
+                "transformer_name": "dimension_block.py"
+            }
+        ]
+    },
+    {
+        "pipeline_type": "dimension_to_db",
+        "pipeline_name": "dimension_cluster_details",
+        "pipeline": [
+            {
+                "dimension_name": "dimension_cluster",
+                "transformer_name": "dimension_cluster.py"
+            }
+        ]
+    },
+    {
+        "pipeline_type": "dimension_to_db",
+        "pipeline_name": "dimension_school_details",
+        "pipeline": [
+            {
+                "dimension_name": "dimension_school",
+                "transformer_name": "dimension_school.py"
+            }
+        ]
+    }
+]

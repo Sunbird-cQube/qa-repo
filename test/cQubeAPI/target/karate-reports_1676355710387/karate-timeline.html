@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.1:23]","start":1676353729470,"end":1676353732095,"title":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.1:23] 11:18:49.470-11:18:52.095 Verify the scenario","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.2:23]","start":1676353732108,"end":1676353732503,"title":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.2:23] 11:18:52.108-11:18:52.503 Verify the scenario","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.3:23]","start":1676353732509,"end":1676353733031,"title":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.3:23] 11:18:52.509-11:18:53.031 Verify the scenario"},{"id":4,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.4:23]","start":1676353733039,"end":1676353733790,"title":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.4:23] 11:18:53.039-11:18:53.790 Verify the scenario"},{"id":5,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.5:23]","start":1676353733797,"end":1676353734131,"title":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.5:23] 11:18:53.797-11:18:54.131 Verify the scenario"},{"id":6,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.6:23]","start":1676353734138,"end":1676353734541,"title":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.6:23] 11:18:54.138-11:18:54.541 Verify the scenario"},{"id":7,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.7:23]","start":1676353734546,"end":1676353735386,"title":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.7:23] 11:18:54.546-11:18:55.386 Verify the scenario"},{"id":8,"group":1,"content":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.8:23]","start":1676353735395,"end":1676353735799,"title":"src\/test\/java\/cqube\/SpecAPI\/School_statistics\/School_SpecTransformer[2.8:23] 11:18:55.395-11:18:55.799 Verify the scenario"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

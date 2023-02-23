@@ -1,0 +1,106 @@
+[
+    {
+        "key_file": "transformer_dataset_mapping.csv",
+        "program": "Scl_Stats",
+        "operation": "dataset",
+        "scenario": "Verify the Spec Transformer by removing ingestion_name property ",
+        "testcase_type": "invalid",
+        "message": "must have required property 'ingestion_name'"
+    },
+    {
+        "ingestion_name": "",
+        "key_file": "transformer_dataset_mapping.csv",
+        "program": "Scl_Stats",
+        "operation": "dataset",
+        "scenario": "Verify the Spec Transformer by ingestion_name as empty string ",
+        "testcase_type": "invalid",
+        "message": "must pass \"shouldnotnull\" keyword validation"
+    },
+    {
+        "ingestion_name": "event_school_statistics_students",
+        "program": "Scl_Stats",
+        "operation": "dataset",
+        "scenario": "Verify the Spec Transformer by removing key_file property ",
+        "testcase_type": "invalid",
+        "message": "must have required property 'key_file'"
+    },
+    {
+        "ingestion_name": "event_school_statistics_students",
+        "key_file": "",
+        "program": "Scl_Stats",
+        "operation": "dataset",
+        "scenario": "Verify the Spec Transformer by key_file as empty string ",
+        "testcase_type": "invalid",
+        "message": "must pass \"shouldnotnull\" keyword validation"
+    },
+    {
+        "ingestion_name": "event_school_statistics_students",
+        "key_file": "transformer_dataset_mapping.csv",
+        "operation": "dataset",
+        "scenario": "Verify the Spec Transformer by removing program property ",
+        "testcase_type": "invalid",
+        "message": "must have required property 'program'"
+    },
+    {
+        "ingestion_name": "event_school_statistics_students",
+        "key_file": "transformer_dataset_mapping.csv",
+        "program": "",
+        "operation": "dataset",
+        "scenario": "Verify the Spec Transformer by program as empty string ",
+        "testcase_type": "invalid",
+        "message": "must pass \"shouldnotnull\" keyword validation"
+    },
+    {
+        "ingestion_name": "event_school_statistics_students",
+        "key_file": "transformer_dataset_mapping.csv",
+        "program": "Scl_Stats",
+        "scenario": "Verify the Spec Transformer by removing operation property ",
+        "testcase_type": "invalid",
+        "message": "must have required property 'operation'"
+    },
+    {
+        "ingestion_name": "event_school_statistics_students",
+        "key_file": "transformer_dataset_mapping.csv",
+        "program": "Scl_Stats",
+        "operation": "",
+        "scenario": "Verify the Spec Transformer by operation as empty string ",
+        "testcase_type": "invalid",
+        "message": "must pass \"shouldnotnull\" keyword validation"
+    },
+    {
+        "ingestion_name": "qa",
+        "key_file": "transformer_dataset_mapping.csv",
+        "program": "Scl_Stats",
+        "operation": "dataset",
+        "scenario": "Verify the Spec Transformer by providing invalid ingestion_name ",
+        "testcase_type": "invalid",
+        "message": "Invalid dataset name"
+    },
+    {
+        "ingestion_name": "event_school_statistics_students",
+        "key_file": "transformer_dataset_mapping",
+        "program": "Scl_Stats",
+        "operation": "dataset",
+        "scenario": "Verify the Spec Transformer by providing without csv file as extention ",
+        "testcase_type": "invalid",
+        "message": "must match pattern \"^.*.(csv)$\""
+    },
+    {
+        "ingestion_name": "event_school_statistics_students",
+        "key_file": "transformer_dataset_mapping.csv",
+        "program": "QA!@##",
+        "operation": "dataset",
+        "scenario": "Verify the Spec Transformer by invalid program name ",
+        "testcase_type": "invalid",
+        "message": "Invalid program name"
+    },
+    {
+        "ingestion_name": "event_school_statistics_students",
+        "key_file": "transformer_dataset_mapping.csv",
+        "program": "Scl_Stats",
+        "operation": "data/",
+        "scenario": "Verify the Spec Transformer by invalid operation ",
+        "testcase_type": "invalid",
+        "message": "Invalid operation type"
+    }
+]
