@@ -1,0 +1,98 @@
+[
+  
+    {
+        "ingestion_type": "event",
+        "ingestion_name": "event_students_attendance",
+        "status": "Processing",
+        "scenario": "Verify status File API with removing file_name",
+        "message" : "must have required property 'file_name'",
+        "testcase_type" : "invalid" 
+    },
+    {
+        "file_name": "",
+        "ingestion_type": "event",
+        "ingestion_name": "event_students_attendance",
+        "status": "Processing",
+        "scenario": "Verify status File API with providing file name as empty string ",
+        "message" : "must pass \"shouldnotnull\" keyword validation",
+        "testcase_type" : "invalid" 
+    },
+    {
+        "file_name": "event_students_attendance",
+        "ingestion_type": "event",
+        "ingestion_name": "event_students_attendance",
+        "status": "Processing",
+        "scenario": "Verify status File API with providing file name as empty string ",
+        "message" : "must match pattern \"^.*.(csv)$\"",
+        "testcase_type" : "invalid" 
+    },
+    {
+        "file_name": "event_students_attendance.csv",
+        "ingestion_name": "event_students_attendance",
+        "status": "Processing",
+        "scenario": "Verify status File API with removing ingestion_type from request body",
+        "message" : "must have required property 'ingestion_type'",
+        "testcase_type" : "valid" 
+    },
+    {
+        "file_name": "event_students_attendance.csv",
+        "ingestion_type": " ",
+        "ingestion_name": "event_students_attendance",
+        "status": "Processing",
+        "scenario": "Verify status File API with providing ingestion_type  as empty string ",
+        "message" : "must be equal to one of the allowed values",
+        "testcase_type" : "invalid" 
+    },
+    {
+        "file_name": "event_students_attendance.csv",
+        "ingestion_type": "event123",
+        "ingestion_name": "event_students_attendance",
+        "status": "Processing",
+        "scenario": "Verify status File API with providing  ingestion_type as invalid ",
+        "message" : "must be equal to one of the allowed values",
+        "testcase_type" : "invalid" 
+    },
+    {
+        "file_name": "event_students_attendance.csv",
+        "ingestion_type": "event",
+        "status": "Processing",
+        "scenario": "Verify status File API with removing ingestion_name from request body",
+        "message" : "must have required property 'ingestion_name'",
+        "testcase_type" : "invalid" 
+    },
+    {
+        "file_name": "event_students_attendance.csv",
+        "ingestion_type": "event",
+        "ingestion_name": "",
+        "status": "Processing",
+        "scenario": "Verify status File API with providing ingestion_name as empty string ",
+        "message" : "must pass \"shouldnotnull\" keyword validation",
+        "testcase_type" : "invalid" 
+    },
+    {
+        "file_name": "event_students_attendance.csv",
+        "ingestion_type": "event",
+        "ingestion_name": "event_students_attendance",
+        "scenario": "Verify status File API with removing status from request body",
+        "message" : "must have required property 'status'",
+        "testcase_type" : "valid" 
+    },
+    {
+        "file_name": "event_students_attendance.csv",
+        "ingestion_type": "event",
+        "ingestion_name": "event_students_attendance",
+        "status": " ",
+        "scenario": "Verify status File API with providing status name as empty string ",
+        "message" : "must pass \"shouldnotnull\" keyword validation",
+        "testcase_type" : "invalid" 
+    },
+    {
+        "file_name": "event_students_attendance.csv",
+        "ingestion_type": "event123",
+        "ingestion_name": "event_students_attendance",
+        "status": "updated",
+        "scenario": "Verify status File API with providing status as invalid value ",
+        "message" : "must be equal to one of the allowed values",
+        "testcase_type" : "invalid" 
+    }
+]
