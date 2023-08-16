@@ -11,7 +11,7 @@ class pm_poshan(Base):
     a_minus = "font-size-decrease"
     a_default = "font-size-reset"
     state_officer = (By.ID, "state")
-    pm_poshan_menu = (By.ID, "menu-item-5")
+    pm_poshan_menu = (By.ID, "menu-item-3")
     progress_status_tab = (By.XPATH, "//div/app-pmposhan/div[2]/mat-tab-group/mat-tab-header/div/div/div/div")
     total_districts_value = (By.XPATH, "//app-big-number/div/div[1]/h1")
     total_districts_label = (By.XPATH, "//app-big-number/div/div[2]")
@@ -26,6 +26,10 @@ class pm_poshan(Base):
     download_button = (By.ID, "downloadButton")
     logout_button = (By.ID, "signOut")
     fullscreen_button = (By.ID, "fullscreen-button")
+    pm_poshan_metric_dropdown = (By.XPATH, "//div[@role='option']/span")
+    legend_text = (By.XPATH, "//*[@id='map']/div[2]/div[2]/div/strong")
+    metrics_dropdown = (By.ID, "filter-Metric")
+    metrics_dropdown_value = (By.XPATH, "//div[starts-with(@id,'a') and contains(@id,"'-'"{}" + ")]")
 
 
 
@@ -124,3 +128,26 @@ class pm_poshan(Base):
         cwd = os.path.dirname(__file__)
         download_path = os.path.join(cwd, '../../Downloads')
         return download_path
+
+    def click_dropdown(self):
+        self.click(self.metrics_dropdown)
+
+    def get_metrics_dropdown_values(self):
+        metric_dropdown_options = self.get_web_elements(self.pm_poshan_metric_dropdown)
+        return metric_dropdown_options
+
+
+    """This functionality is to get id of each metric in dropdown"""
+
+    def get_each_dropdown_value_id(self, metrics_dropdown_id):
+        metrics_dropdown_value = self.metrics_dropdown_value
+        metrics_dropdown_value = list(metrics_dropdown_value)
+        metrics_dropdown_value[1] = metrics_dropdown_value[1].format(metrics_dropdown_id)
+        metrics_dropdown_value = tuple(metrics_dropdown_value)
+        res = self.get_web_element((By.XPATH, str(metrics_dropdown_value[1])))
+        return res
+
+    """ This functionality is to get legend text"""
+
+    def get_legend_text(self):
+        return self.get_web_element_text(self.legend_text)

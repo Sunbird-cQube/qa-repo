@@ -3,10 +3,7 @@ import os
 import time
 import re
 
-
 from selenium.webdriver.common.alert import Alert
-
-
 from Page_of_objects.CqubeUi.homepage import Homepage
 from Page_of_objects.CqubeUi.pgi import Pgi
 from Page_of_objects.CqubeUi.summary_statistics import Summarystatistics
@@ -41,6 +38,7 @@ class TestPgi:
                                                "/pgi.log", level=logging.DEBUG)
 
     """Check whether pgi page is displaying or not"""
+
     def test_pgi_page(self):
         self.logger.info("*************** Tc_cQube_pgi_001 Testing started *****************")
         time.sleep(8)
@@ -69,6 +67,7 @@ class TestPgi:
         self.logger.info("*************** Tc_cQube_pgi_002 Testing ended *****************")
 
     """Check whether home button is working or not"""
+
     def test_home_button(self):
         self.logger.info("*************** Tc_cQube_pgi_003 Testing Started *****************")
         self.homepage.test_click_on_home_button()
@@ -82,6 +81,7 @@ class TestPgi:
         self.logger.info("*************** Tc_cQube_pgi_003 Testing ended *****************")
 
     """Check whether a minus button is working or not"""
+
     def test_click_the_a_minus_button(self):
         self.logger.info("*************** Tc_cQube_pgi_004 Testing started *****************")
         res = self.homepage.test_click_on_a_minus_button()
@@ -123,6 +123,7 @@ class TestPgi:
         self.logger.info("*************** Tc_cQube_pgi_006 Testing Ended *****************")
 
     """Check whether logout button is working or not"""
+
     def test_logout(self):
         self.logger.info("*************** Tc_cQube_pgi_007 Testing Started *****************")
         time.sleep(5)
@@ -137,6 +138,7 @@ class TestPgi:
         self.logger.info("*************** Tc_cQube_pgi_007 Testing ended *****************")
 
     """Check whether key metrics of learning_outcome_and_quality is displaying or not"""
+
     def test_validate_learning_outcome_and_quality_metrics(self):
         self.logger.info("*************** Tc_cQube_pgi_008 Testing started *****************")
         learning_outcome = self.pgi.get_learning_outcome_value()
@@ -159,6 +161,7 @@ class TestPgi:
         self.logger.info("*************** Tc_cQube_pgi_008 Testing Ended. *****************")
 
     """Check whether key metrics of infrastructure_and_facility is displaying or not"""
+
     def test_validate_infrastructure_and_facility_metrics(self):
         self.logger.info("*************** Tc_cQube_pgi_009 Testing started *****************")
         infrastructure = self.pgi.get_infrastructure_value()
@@ -181,6 +184,7 @@ class TestPgi:
         self.logger.info("*************** Tc_cQube_pgi_009 Testing Ended. *****************")
 
     """Check whether key metrics of governance_process is displaying or not"""
+
     def test_validate_governance_process_metrics(self):
         self.logger.info("*************** Tc_cQube_pgi_010 Testing started *****************")
         time.sleep(6)
@@ -205,6 +209,7 @@ class TestPgi:
         self.logger.info("*************** Tc_cQube_pgi_010 Testing Ended. *****************")
 
     """Check whether legend is working or not"""
+
     def test_legend(self):
         self.logger.info("*************** Tc_cQube_pgi_011 Testing started *****************")
         time.sleep(6)
@@ -229,8 +234,9 @@ class TestPgi:
         self.logger.info("*************** Tc_cQube_pgi_011 Testing started *****************")
 
     """Check whether map is displaying or not"""
+
     def test_check_map_on_page(self):
-        self.logger.info("*************** Tc_cQube_pgi_018 Testing started *****************")
+        self.logger.info("*************** Tc_cQube_pgi_012 Testing started *****************")
         map_info = self.pgi.get_map_information()
         if len(map_info) > 0:
             print("Map is present on the pgi page")
@@ -238,12 +244,12 @@ class TestPgi:
         else:
             self.logger.error("*********** Map is not present on the pgi page ***************")
             assert False
-        self.logger.info("*************** Tc_cQube_pgi_018 Testing ended *****************")
+        self.logger.info("*************** Tc_cQube_pgi_012 Testing ended *****************")
 
     """Check whether download csv button is working or not"""
 
     def test_download_button_pgi_pdf(self):
-        self.logger.info("*************** Tc_cQube_pgi_020 Testing started *****************")
+        self.logger.info("*************** Tc_cQube_pgi_013 Testing started *****************")
         time.sleep(8)
         p = Teacherattendance(self)
         self.teacherattendance.click_download_button()
@@ -267,17 +273,16 @@ class TestPgi:
         else:
             print("file is not downloaded")
             assert False
-        self.logger.info("*************** Tc_cQube_pgi_020 Testing ended *****************")
-
-
+        self.logger.info("*************** Tc_cQube_pgi_013 Testing ended *****************")
 
     """Check whether full screen button is working or not"""
+
     def test_full_screen_avg_teacher_tab(self):
-        self.logger.info("*************** Tc_cQube_pgi_021 Testing started *****************")
+        self.logger.info("*************** Tc_cQube_pgi_014 Testing started *****************")
         self.teacherattendance.click_fullscreen_button()
         time.sleep(3)
         is_full_screen = self.driver.execute_script(
             "return window.screen.width == screen.width && window.screen.height == screen.height;")
         print(is_full_screen)
         assert is_full_screen
-        self.logger.info("*************** Tc_cQube_pgi_021 Testing ended *****************")
+        self.logger.info("*************** Tc_cQube_pgi_014 Testing ended *****************")

@@ -6,7 +6,7 @@
     <artifactId>cQubeAPI</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    
+ 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
@@ -15,37 +15,13 @@
         <karate.version>1.2.0</karate.version>
     </properties>    
 
-    <dependencies> 
-    
+    <dependencies>         
         <dependency>
             <groupId>com.intuit.karate</groupId>
             <artifactId>karate-junit5</artifactId>
             <version>${karate.version}</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.intuit.karate</groupId>
-            <artifactId>karate-apache</artifactId>
-            <version>0.9.6</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.5.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.microsoft.sqlserver</groupId>
-            <artifactId>mssql-jdbc</artifactId>
-            <version>11.2.1.jre11</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
-        </dependency>
-        
+        </dependency>		
     </dependencies>
 
     <build>
@@ -74,30 +50,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
                 <configuration>
-                    <systemProperties>
-                        <karate.options>--tags @ignore</karate.options>
-                    </systemProperties>            
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
             </plugin>          
         </plugins>        
     </build>       
     
-
-
-    <dependencyManagement>
-    
-
-        <dependencies>
-        
-
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>1.7.33</version>
-            </dependency>
-
-        </dependencies>
-
-    </dependencyManagement>
 </project>

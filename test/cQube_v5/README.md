@@ -40,16 +40,16 @@
 #  Navigate to cQubeTesting Folder directory in the terminal
   ### Steps to Execute the Scripts - Open the terminal and enter the below commands
   ```
-  pytest -v -s --capture=tee-sys TestCases/test_dashboard.py --html=Reports/dashboard.html
-  pytest -v -s --capture=tee-sys TestCases/test_loginpage.py --html=Reports/loginpage.html
-  pytest -v -s --capture=tee-sys TestCases/test_homepage.py --html=Reports/homepage.html
-  pytest -v -s --capture=tee-sys TestCases/test_nas.py --html=Reports/nas.html
-  pytest -v -s --capture=tee-sys TestCases/test_nishtha.py --html=Reports/nishtha.html
-  pytest -v -s --capture=tee-sys TestCases/test_diksha_etb.py --html=Reports/diksha_etb.html
-  pytest -v -s --capture=tee-sys TestCases/test_pm_poshan.py --html=Reports/pm_poshan.html
-  pytest -v -s --capture=tee-sys TestCases/test_udise.py --html=Reports/udise.html
-  pytest -v -s --capture=tee-sys TestCases/test_pgi.py --html=Reports/pgi.html
-  pytest -v -s --capture=tee-sys TestCases/test_review_meetings.py --html=Reports/review_meetings.html
+  pytest -v -s --capture=tee-sys Testcases/test_dashboard.py --html=Reports/dashboard.html
+  pytest -v -s --capture=tee-sys Testcases/test_loginpage.py --html=Reports/loginpage.html
+  pytest -v -s --capture=tee-sys Testcases/test_homepage.py --html=Reports/homepage.html
+  pytest -v -s --capture=tee-sys Testcases/test_nas.py --html=Reports/nas.html
+  pytest -v -s --capture=tee-sys Testcases/test_nishtha.py --html=Reports/nishtha.html
+  pytest -v -s --capture=tee-sys Testcases/test_diksha_etb.py --html=Reports/diksha_etb.html
+  pytest -v -s --capture=tee-sys Testcases/test_pm_poshan.py --html=Reports/pm_poshan.html
+  pytest -v -s --capture=tee-sys Testcases/test_udise.py --html=Reports/udise.html
+  pytest -v -s --capture=tee-sys Testcases/test_pgi.py --html=Reports/pgi.html
+  pytest -v -s --capture=tee-sys Testcases/test_review_meetings.py --html=Reports/review_meetings.html
   
   ```
 

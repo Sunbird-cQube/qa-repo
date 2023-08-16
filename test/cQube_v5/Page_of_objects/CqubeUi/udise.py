@@ -1,4 +1,4 @@
-import os
+
 import time
 
 from selenium.webdriver import ActionChains
@@ -9,7 +9,7 @@ from Page_of_objects.CqubeUi.BasePage import Base
 class Udise(Base):
     """ List of selenium locator of summary statistics screen """
 
-    udise = (By.ID, "menu-item-6")
+    udise = (By.ID, "menu-item-4")
     L = r'L\.|[^\d.]'
     K = r'K\.|[^\d.]'
     district_wise_performance = (By.XPATH, "//mat-tab-group/mat-tab-header/div/div/div/div")
@@ -28,6 +28,7 @@ class Udise(Base):
     metrics_dropdown_value = (By.XPATH, "//div[starts-with(@id,'a') and contains(@id,"'-'"{}" + ")]")
     legend_text = (By.XPATH, "//*[@id='map']/div[2]/div[2]/div/strong")
     map = (By.XPATH, "//*[@id='map']")
+    download_button = (By.ID, "downloadButton")
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -69,6 +70,10 @@ class Udise(Base):
     def get_schools_having_drinking_water_text(self):
         return self.get_web_element_text(self.schools_having_drinking_water_text)
 
+
+    def click_download_button(self):
+        self.click(self.download_button)
+
     def click_dropdown(self):
         self.click(self.metrics_dropdown)
 
@@ -105,8 +110,6 @@ class Udise(Base):
         blue_marks = 0
         white_marks = 0
         time.sleep(2)
-        map_data = []
-        # for x in range(1, 3):
         for x in range(1, len(lst)):
             if lst[x].get_attribute('fill') == '#FFFFFF':
                 white_marks = white_marks + 1
@@ -117,6 +120,4 @@ class Udise(Base):
             act.pause(3)
             time.sleep(2)
             print('option mouse overing is completed')
-            # txt = self.driver.find_element(By.XPATH, "//div[@class='leaflet-pane leaflet-tooltip-pane']")
-            # map_data.append(txt.text)
-        # return map_data
+

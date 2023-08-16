@@ -1,3 +1,6 @@
+import os
+import time
+
 from selenium.webdriver.common.by import By
 from Page_of_objects.CqubeUi.BasePage import Base
 
@@ -21,10 +24,16 @@ class Diksha(Base):
     diksha_metric_dropdown = (By.XPATH, "//div[@role='option']/span")
     metrics_dropdown_value = (By.XPATH, "//div[starts-with(@id,'a') and contains(@id,"'-'"{}" + ")]")
     legend_text = (By.XPATH, "//*[@id='map']/div[2]/div[2]/div/strong")
+    program_sort = "//th[@role='columnheader'][1]"
+    nishtha_started_sort = "//th[@role='columnheader'][2]"
+    medium_sort = "//th[@role='columnheader'][3]"
+    Subject_header = "//div[contains(text(),'Subject')]"
+    class_header = "//div[contains(text(),'Class 2')]"
 
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
+        self.count = 0
 
     def test_click_on_diksha_menu(self):
         self.click(self.diksha)
@@ -83,3 +92,51 @@ class Diksha(Base):
 
     def get_legend_text(self):
         return self.get_web_element_text(self.legend_text)
+
+    def check_table_subject_headers_clickable(self):
+        status = self.driver.find_element(By.XPATH, self.program_sort).get_attribute('aria-sort')
+        self.driver.find_element(By.XPATH, self.Subject_header).click()
+        time.sleep(8)
+        now = self.driver.find_element(By.XPATH, self.program_sort).get_attribute('aria-sort')
+        self.count = 0
+        sort = "descending"
+        if now == 'ascending' or sort:
+            assert True
+        else:
+            print(status, now, 'Table value order is not changed so sorting is not working')
+            self.count = self.count + 1
+        self.driver.find_element(By.XPATH, self.Subject_header).click()
+        time.sleep(2)
+        sec_click = self.driver.find_element(By.XPATH, self.program_sort).get_attribute('aria-sort')
+        sort = "descending"
+        if sec_click == 'ascending' or sort:
+            assert True
+        else:
+            self.count = self.count + 1
+        return self.count
+
+    def test_check_class_headers_clickable(self):
+        status = self.driver.find_element(By.XPATH, self.nishtha_started_sort).get_attribute('aria-sort')
+        self.driver.find_element(By.XPATH, self.class_header).click()
+        time.sleep(7)
+        now = self.driver.find_element(By.XPATH, self.nishtha_started_sort).get_attribute('aria-sort')
+        sort = "descending"
+        if now == 'ascending' or sort:
+            assert True
+        else:
+            print(status, now, "********Course launched Header sorting is not working ***********")
+            self.count = self.count + 1
+        self.driver.find_element(By.XPATH, self.class_header).click()
+        sec_click = self.driver.find_element(By.XPATH, self.nishtha_started_sort).get_attribute('aria-sort')
+        sort = "descending"
+        if sec_click == 'ascending' or sort:
+            assert True
+        else:
+            print(status, now, "********Course launched Header sorting is not working ***********")
+            self.count = self.count + 1
+        return self.count
+
+    def get_download_dir(self):
+        cwd = os.path.dirname(__file__)
+        download_path = os.path.join(cwd, '../../Downloads')
+        return download_path

@@ -1,0 +1,40 @@
+{
+    "program": "nipunbharat_lo-covered-by-textbook",
+    "input": {
+        "type": "object",
+        "properties": {
+            "tb_id": {
+                "type": "string",
+                "shouldnotnull": true
+            },
+            "tb_name": {
+                "type": "string",
+                "shouldnotnull": true
+            },
+            "grade": {
+                "type": "string",
+                "shouldnotnull": true
+            },
+            "total_los": {
+                "type": "number",
+                "shouldnotnull": true
+            },
+            "los_covered": {
+                "type": "number",
+                "shouldNotNull": true
+            },
+            "%_los_covered": {
+                "type": "number",
+                "shouldnotnull": true
+            }
+        },
+        "required": [
+            "tb_id",
+            "tb_name",
+            "grade",
+            "total_los",
+            "los_covered",
+            "%_los_covered"
+        ]
+    }
+}

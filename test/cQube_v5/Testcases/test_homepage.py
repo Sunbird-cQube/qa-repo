@@ -1,11 +1,11 @@
 import logging
+import os
 import time
 
-# import pytest
 
 import sys
 
-sys.path.append('/home/tanushree/Downloads/cQube_v5/')
+sys.path.append(os.getcwd())
 from Page_of_objects.CqubeUi.homepage import Homepage
 from Testcases.conftest import ConfTest
 from Utilities import CustomLogger

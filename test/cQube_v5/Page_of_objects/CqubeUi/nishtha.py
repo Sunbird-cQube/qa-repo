@@ -11,7 +11,7 @@ class nishtha(Base):
     a_minus = "font-size-decrease"
     a_default = "font-size-reset"
     state_officer = (By.ID, "state")
-    nishtha_menu = (By.ID, "menu-item-9")
+    nishtha_menu = (By.ID, "menu-item-7")
     level = "state"
 
     Implementation_Status_tab = (By.XPATH, "//*[contains(text(),'Implementation Status')]")
@@ -61,12 +61,12 @@ class nishtha(Base):
     total_course_column = "//div/table/tbody/tr[{}]/td[2]"
     medium_column = "//div/table/tbody/tr[{}]/td[3]"
 
-
     total_course_launched_header = "//div[contains(text(),'Total Courses Launched')]"
     medium_header = "//div[contains(text(),'Total Mediums')]"
 
     total_course_launched_sort = "//th[@role='columnheader'][2]"
 
+    download_button = (By.ID, "downloadButton")
 
     stacked_bars = (By.CSS_SELECTOR, "rect.highcharts-point")
     home_button = (By.ID, "homeButton")
@@ -114,7 +114,6 @@ class nishtha(Base):
             count = count + 1
         return count
 
-
     def click_on_access_nishtha_menu(self):
         self.click(self.nishtha_menu)
 
@@ -125,7 +124,7 @@ class nishtha(Base):
         self.click(self.state_officer)
 
     def test_click_on_home_button(self):
-            self.click(self.home_button)
+        self.click(self.home_button)
 
     def test_click_logout_button(self):
         self.click(self.logout_button)
@@ -149,20 +148,24 @@ class nishtha(Base):
         self.click(self.Implementation_Status_tab)
 
     def click_implementation_status(self):
-        result = self.driver.find_element(By.XPATH,self.implementation_tab_status).get_attribute('aria-selected')
+        result = self.driver.find_element(By.XPATH, self.implementation_tab_status).get_attribute('aria-selected')
         return result
         # return self.get_attribute_value('aria-selected', self.Implementation_Status_tab)
 
     def click_course_and_medium_status(self):
-        result = self.driver.find_element(By.XPATH,self.course_medium_tab_status).get_attribute('aria-selected')
+        result = self.driver.find_element(By.XPATH, self.course_medium_tab_status).get_attribute('aria-selected')
         return result
 
     def click_per_against_potential_base(self):
-        result = self.driver.find_element(By.XPATH,self.potential_tab_status).get_attribute('aria-selected')
+        result = self.driver.find_element(By.XPATH, self.potential_tab_status).get_attribute('aria-selected')
         return result
 
     def click_course_wise_status(self):
-        result = self.driver.find_element(By.XPATH,self.course_wise_tab_status).get_attribute('aria-selected')
+        result = self.driver.find_element(By.XPATH, self.course_wise_tab_status).get_attribute('aria-selected')
+        return result
+
+    def click_district_wise_status(self):
+        result = self.driver.find_element(By.XPATH, self.district_wise_tab_status).get_attribute('aria-selected')
         return result
 
     def click_course_and_medium_status1(self):
@@ -379,27 +382,10 @@ class nishtha(Base):
 
     '''Function to check with state values '''
 
-    def test_check_state_table_values(self):
-        state_tablevals = []
-        state_name = self.driver.find_elements(By.XPATH, self.state_values)
-        for i in range(1, len(state_name)):
-            state_list = self.driver.find_element(By.XPATH, self.state_column.format(i))
-            state_tablevals.append(state_list.text)
-        for j in range(len(state_tablevals)):
-            st_name = state_tablevals[j]
-            if st_name != st_name.lower() and st_name != st_name.upper() and "_" not in st_name:
-                print("************ State Names are In Camel Cases *****************")
-            else:
-                print("**************** State Name are not in Camel Cases ")
-                self.count = self.count + 1
-        if len(state_tablevals) == len(state_name) - 1:
-            print("************ State Table values are showing ****************")
-            assert True
-        else:
-            print("************ State names are not showing **************")
-            self.count = self.count + 1
-        return self.count
 
+
+    def click_download_button(self):
+        self.click(self.download_button)
 
     def get_course_wise_stacked_bar_tooltip_validation(self):
         lst = self.get_count_of_bars_in_chart()
@@ -411,8 +397,3 @@ class nishtha(Base):
                 act.move_to_element(lst[x]).perform()
                 act.pause(5)
             return self.count
-
-
-
-
-

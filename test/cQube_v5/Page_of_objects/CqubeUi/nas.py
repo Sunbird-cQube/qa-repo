@@ -7,13 +7,18 @@ from selenium.webdriver.common.by import By
 from Page_of_objects.CqubeUi.BasePage import Base
 
 
-class nas(Base):
+def get_download_dir():
+    cwd = os.path.dirname(__file__)
+    download_path = os.path.join(cwd, '../../Downloads')
+    return download_path
+
+
+class Nas(Base):
     a_plus = "font-size-increase"
     a_minus = "font-size-decrease"
     a_default = "font-size-reset"
     state_officer = (By.ID, "state")
-    nas_menu = (By.ID, "menu-item-7")
-    # District_Wise_Performance_tab = (By.XPATH, '//div/app-nas/div[2]/mat-tab-group/mat-tab-header/div/div/div/div[1]/div[1]')
+    nas_menu = (By.ID, "menu-item-5")
     district_Wise_Performance = (By.XPATH, "//mat-tab-group/mat-tab-header/div/div/div/div")
     grade_and_Subject_Performance = (By.XPATH, "//mat-tab-group/mat-tab-header/div/div/div/div[2]")
     total_schools_value = (By.XPATH, "//app-big-number/div/div[1]/h1")
@@ -41,14 +46,9 @@ class nas(Base):
     chart_value = (By.TAG_NAME, "td")
     level = "state"
 
-
-
-
-
-
-
     def __init__(self, driver):
         super().__init__(driver)
+        self.driver = driver
 
     def test_click_on_a_default_button(self):
         count = 0
@@ -92,8 +92,8 @@ class nas(Base):
         print("No of States", len(lst) - 1)
         blue_marks = 0
         white_marks = 0
-        map_data = []
-        for x in range(1, len(lst)-1):
+        self.map_data = []
+        for x in range(1, len(lst) - 1):
             if lst[x].get_attribute('fill') == '#FFFFFF':
                 white_marks = white_marks + 1
             else:
@@ -163,11 +163,6 @@ class nas(Base):
         res = self.get_web_elements(self.chart_value)
         return res
 
-    def get_download_dir(self):
-        cwd = os.path.dirname(__file__)
-        download_path = os.path.join(cwd, '../../Downloads')
-        return download_path
-
     """ This function is used to click on grade drop down"""
 
     def click_on_grade(self):
@@ -206,5 +201,3 @@ class nas(Base):
         grade_dropdown_value = tuple(grade_dropdown_value)
         res = self.get_web_element((By.XPATH, str(grade_dropdown_value[1])))
         return res
-
-

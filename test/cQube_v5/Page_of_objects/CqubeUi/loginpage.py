@@ -22,6 +22,7 @@ class loginpage(Base):
     dashboard_logfile = "../../../Logs/Dashboard.log"
 
     def open_cqube_application(self):
+        print(ReadConfig.get_application_url())
         self.get_url(ReadConfig.get_application_url())
         time.sleep(5)
 
